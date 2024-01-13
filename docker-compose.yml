@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - XDEBUG_MODE=coverage
+      - MEMORY_LIMIT=512M
+    volumes:
+      - .:/app
+    depends_on:
+      composer:
+        condition: service_completed_successfully
+  composer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    entrypoint: composer
+    command: ["install"]

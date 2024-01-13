@@ -1,0 +1,15 @@
+### PhpStorm template
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+.idea/*
+vendor
+.phpunit.result.cache
+.phpunit.cache
+infection-log.json
+infection.html
+infection.log
+summary.json
+summary.log
+per-mutator.md
+phpunit.xml.bak
