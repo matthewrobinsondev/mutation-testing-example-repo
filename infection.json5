@@ -2,7 +2,6 @@
     "$schema": "vendor/infection/infection/resources/schema.json",
     "source": {
         "directories": [
-            "Calculator",
             "Modules",
         ],
         "excludes": [
@@ -12,14 +11,9 @@
     },
     "timeout": 10,
     "logs": {
-        "text": "infection.log",
         "html": "infection.html",
-        "summary": "summary.log",
         "json": "infection-log.json",
         "perMutator": "per-mutator.md",
-        "stryker": {
-            "badge": "/^release-.*$/"
-        },
         "summaryJson": "summary.json"
     },
     "mutators": {
