@@ -6,6 +6,9 @@ use Modules\Inventory\Model\InventoryItem;
 
 class InventoryRepository
 {
+    /**
+     * @var array<string, InventoryItem> $items
+     */
     private array $items = [];
 
     public function addItem(InventoryItem $item): void

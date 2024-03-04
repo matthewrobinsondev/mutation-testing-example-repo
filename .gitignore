@@ -13,3 +13,4 @@ summary.json
 summary.log
 per-mutator.md
 phpunit.xml.bak
+.phpactor.json

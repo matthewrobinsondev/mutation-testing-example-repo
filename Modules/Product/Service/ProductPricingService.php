@@ -6,6 +6,9 @@ use Modules\Product\Repository\ProductRepository;
 
 class ProductPricingService
 {
+    /**
+     * @var array<string, float> $currencyExchangeRates
+     */
     private array $currencyExchangeRates;
 
     public function __construct(private readonly ProductRepository $repository)

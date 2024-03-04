@@ -8,10 +8,13 @@ class Product
     private const WHOLE_PERCENT = 100;
 
     public function __construct(
-        private readonly int $id)
-    {
+        private readonly int $id
+    ) {
     }
 
+    /**
+     * @var array<string, float> $prices
+     */
     private array $prices = [];
 
     public function getId(): int
@@ -21,7 +24,7 @@ class Product
 
     public function applyDiscount(float $discountPercentage, float $price = null, string $currency = 'GBP'): void
     {
-        if(empty($price)) {
+        if (empty($price)) {
             $price = $this->getPrice($currency);
         }
 

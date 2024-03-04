@@ -8,8 +8,8 @@ class InventoryItem
     public function __construct(
         private readonly string $id,
         private readonly string $name,
-        private readonly int $quantity)
-    {
+        private readonly int $quantity
+    ) {
     }
 
     public function getId(): string
@@ -22,7 +22,7 @@ class InventoryItem
         return $this->name;
     }
 
-    public function getQuantity(): string
+    public function getQuantity(): int
     {
         return $this->quantity;
     }

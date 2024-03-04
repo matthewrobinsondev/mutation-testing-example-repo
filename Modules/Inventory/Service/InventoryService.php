@@ -29,10 +29,15 @@ class InventoryService
      * @throws OutOfStockException
      * @throws LowInventoryException
      */
-    public function checkInventory(string $itemId)
+    public function checkInventory(string $itemId): int
     {
         $item = $this->repository->getItem($itemId);
-        $quantity = $item->getQuantity();
+
+        $quantity = $item?->getQuantity();
+
+        if ($quantity === null) {
+            // throw something
+        }
 
         if ($quantity == 0) {
             throw new OutOfStockException("Remove {$itemId} from being available.");
