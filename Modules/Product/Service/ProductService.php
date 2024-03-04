@@ -19,6 +19,7 @@ class ProductService
         }
 
         $product->applyDiscount($discount);
+
         return true;
     }
 }

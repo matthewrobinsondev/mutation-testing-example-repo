@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.9"
 services:
   php:
     build:
@@ -20,3 +20,12 @@ services:
       - .:/app
     entrypoint: composer
     command: ["install"]
+  infection:
+    user: "${UID}:${GID}"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    entrypoint: ./vendor/bin/infection
+    command: ["--threads=4"]
