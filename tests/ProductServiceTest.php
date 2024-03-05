@@ -1,5 +1,7 @@
 <?php
 
+namespace tests;
+
 use Modules\Product\Model\Product;
 use Modules\Product\Repository\ProductRepository;
 use Modules\Product\Service\ProductService;
@@ -11,6 +13,8 @@ class ProductServiceTest extends TestCase
     private const EXPECTED_DISCOUNT_VALUE = 90.0;
     private const PRODUCT_ID = 1;
     private const PRICE = 100.0;
+    private ProductRepository $repository;
+    private ProductService $service;
 
     protected function setUp(): void
     {
@@ -18,7 +22,7 @@ class ProductServiceTest extends TestCase
         $this->service = new ProductService($this->repository);
     }
 
-    public function testApplyDiscountToProduct()
+    public function testApplyDiscountToProduct(): void
     {
         $product = new Product(self::PRODUCT_ID);
         $product->setPrice(self::PRICE, 'GBP');

@@ -2,7 +2,6 @@
 
 namespace Modules\Inventory\Model;
 
-
 class InventoryItem
 {
     public function __construct(

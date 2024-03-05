@@ -1,7 +1,8 @@
 <?php
 
-declare(strict_types=1);
+namespace tests;
 
+use Generator;
 use Modules\Inventory\Exceptions\LowInventoryException;
 use Modules\Inventory\Exceptions\OutOfStockException;
 use Modules\Inventory\Model\InventoryItem;
