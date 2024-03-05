@@ -12,9 +12,6 @@
     "timeout": 10,
     "logs": {
         "html": "infection.html",
-        "json": "infection-log.json",
-        "perMutator": "per-mutator.md",
-        "summaryJson": "summary.json"
     },
     "mutators": {
         "@default": true
